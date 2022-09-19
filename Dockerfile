@@ -1,4 +1,4 @@
-FROM debian:11.4
+FROM debian:11.5
 
 RUN sed -i 's/ main$/ main contrib non-free/' /etc/apt/sources.list && \
     sed -i 's/^deb \(.*\)/deb \1\ndeb-src \1/' /etc/apt/sources.list && \
