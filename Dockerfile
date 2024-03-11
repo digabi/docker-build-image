@@ -1,4 +1,4 @@
-FROM debian:10.4
+FROM --platform=linux/amd64 debian:10.4
 
 RUN sed -i 's/ main$/ main contrib non-free/' /etc/apt/sources.list && \
     sed -i 's/^deb \(.*\)/deb \1\ndeb-src \1/' /etc/apt/sources.list && \
