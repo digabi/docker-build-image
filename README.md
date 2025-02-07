@@ -6,6 +6,6 @@ Docker image for building packages for DigabiOS
 
 ```
 docker build -t 863419159770.dkr.ecr.eu-north-1.amazonaws.com/jenkins-build-bookworm:latest .
-aws-vault exec ytl-utility -- aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 863419159770.dkr.ecr.eu-north-1.amazonaws.com
+aws-vault exec digabi -- aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 863419159770.dkr.ecr.eu-north-1.amazonaws.com
 docker push 863419159770.dkr.ecr.eu-north-1.amazonaws.com/jenkins-build-bookworm:latest
 ```
