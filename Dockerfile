@@ -8,7 +8,7 @@ RUN adduser --system --uid 1001 --home /home/digabi --shell /bin/bash digabi
 RUN chown digabi /home/digabi
 
 RUN apt-get update
-RUN apt-get -y install sudo build-essential fakeroot libssl-dev bc libelf-dev binwalk bison flex devscripts cpio wget kmod rsync python3-pip ruby ruby-dev curl golang
+RUN apt-get -y install sudo build-essential fakeroot libssl-dev bc libelf-dev binwalk bison flex devscripts cpio wget kmod rsync python3-pip ruby ruby-dev curl golang libsystemd-dev
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | sudo -u digabi bash && \
     sudo -u digabi bash -c 'cd ; . ~/.nvm/nvm.sh; nvm install 22.12.0'
