@@ -15,3 +15,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | s
 
 RUN gem install fpm
 RUN pip3 install awscli --break-system-packages
+
+RUN ln -sf /home/digabi/.nvm/versions/node/v22.12.0/bin/node /usr/bin/nodejs
+RUN ln -sf /home/digabi/.nvm/versions/node/v22.12.0/bin/node /usr/bin/node
+RUN ln -sf /home/digabi/.nvm/versions/node/v22.12.0/bin/npm /usr/bin/npm
